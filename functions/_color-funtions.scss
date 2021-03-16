@@ -1,0 +1,9 @@
+// ===============================================
+// COLOR FUNCTIONS
+// ===============================================
+$base: #3acec2;
+$base-dark: darken($base, 25%);
+$base-light: lighten($base, 25%);
+
+$complement: complement($base); // Generate the complement color of the base color
+$complement-light: lighten($complement, 100%);

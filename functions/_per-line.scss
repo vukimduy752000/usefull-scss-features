@@ -1,0 +1,15 @@
+// ===============================================
+// DETERMINE HOW MANY ITEMS IN 1 LINES WHEN USING FLEXBOX ( reponsive layout )
+// ===============================================
+
+$gutter: 20px;
+
+@function px-to-pc($target, $context: $max-width) {
+    @return ($target / $context) * 100%;
+}
+
+@function per-line($item) {
+    $g-pct: px-to-pc($gutter) * 2; // convert gutter to percent
+    $g-total: $item * $g-pct; // total gutter of each item
+    @return (100% / $items) - $g-total; // return percentage of each item in 1 line
+}
